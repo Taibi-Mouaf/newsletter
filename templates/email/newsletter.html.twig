@@ -1,0 +1,7 @@
+<div> Bienvenue {{subscriber.name}},</div>
+<div> Vous recevez cet email car vous êtes abonné à la newsletter {{newsletter.name}}.</div>
+<div> Ce n’est pas du SPAM :) </div>
+<div>
+<a href="{{ absolute_url(path('app_newsletter_subscribers_remove', {id: subscriber.id, token: subscriber.token,newslettre_id:newsletter.id})) }}">Cliquez ici </a> pour vous désinscrire /
+<a href="{{ absolute_url(path('app_newsletter_subscribers_update', {id: subscriber.id, token: subscriber.token})) }}">Cliquez ici </a> pour modifier vos abonnements.
+</div>
