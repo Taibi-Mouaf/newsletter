@@ -88,6 +88,7 @@ class NewsletterSubscribersController extends AbstractController
                 $subscriber->removeNewsletterName($newsletter);
                 $em->persist($subscriber);
                 $em->flush();
+                $this->addFlash('success', 'Newsletter deleted');
             }
         }
 
